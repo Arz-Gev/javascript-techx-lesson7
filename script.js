@@ -100,3 +100,40 @@ function deleteDuplicate(arr) {
 console.log(deleteDuplicate(arr2));
 
 // ---------------------------------------- TASK 7
+
+const people = [
+  { name: "Alice", age: 21 },
+  { name: "Bob", age: 25 },
+  { name: "Charlie", age: 21 },
+  { name: "David", age: 25 },
+];
+
+function groupByAge(people) {
+  let map = new Map();
+
+  people.forEach((person) => {
+    const { name, age } = person;
+
+    if (map.has(age)) {
+      map.set(age, map.get(age) + `, ${name}`);
+    } else {
+      map.set(age, [name]);
+    }
+  });
+
+  return map;
+}
+
+console.log(groupByAge(people));
+
+// --------------------------------------------- TASK 8
+// Task 8: Update Map Values
+
+// Given a Map where keys are product IDs and values are quantities sold:
+// const sales = new Map([
+//   [101, 10],
+//   [102, 5],
+//   [103, 8]
+// ]);
+// Write a function to increase the quantity sold by 1 for a given product ID.
+// Here is the google doc link:s
