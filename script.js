@@ -127,13 +127,15 @@ function groupByAge(people) {
 console.log(groupByAge(people));
 
 // --------------------------------------------- TASK 8
-// Task 8: Update Map Values
 
-// Given a Map where keys are product IDs and values are quantities sold:
-// const sales = new Map([
-//   [101, 10],
-//   [102, 5],
-//   [103, 8]
-// ]);
-// Write a function to increase the quantity sold by 1 for a given product ID.
-// Here is the google doc link:s
+const sales = new Map([
+  [101, 10],
+  [102, 5],
+  [103, 8],
+]);
+
+function IncrementSold(map, id) {
+  return map.set(id, map.get(id) + 1);
+}
+
+console.log(IncrementSold(sales, 102));
